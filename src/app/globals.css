@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Add any additional custom styles here */
+
+.animated-background {
+  background: linear-gradient(to bottom right, #3498db, #2980b9);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation classes from animate.css */
+@import 'animate.css/animate.min.css';
+
+/* Customize animation duration and delay as needed */
+.animated {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+
+/* styles/globals.css */
+
+@media (max-width: 768px) {
+  video {
+    width: 100%;
+  }
+}
